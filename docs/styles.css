@@ -78,11 +78,7 @@ menu a:visited {
    HERO
 ========================= */
 
-.seccion {
-  width: 100%;
-}
-
-.hero {
+.hero-seccion {
   width: 100%;
   max-width: 900px;
   margin: auto;
@@ -278,7 +274,7 @@ footer {
 }
 
 /*movil*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   header {
     width: 100%;
     display: flex;
@@ -314,14 +310,7 @@ footer {
     text-decoration: none;
   }
 
-  .seccion {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero {
+  .hero-seccion {
     gap: 0px;
     width: 100%;
     display: flex;
@@ -357,7 +346,17 @@ footer {
   }
 }
 
-/*tablet*/
+/*tablet- uno*/
+@media screen and (max-width: 700px) {
+  .hero-seccion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+/*tablet- dos*/
 @media screen and (max-width: 1000px) {
   header {
     width: 100%;
@@ -395,17 +394,12 @@ footer {
     text-decoration: none;
   }
 
-  .seccion {
-    width: 60%;
+  .hero-seccion {
+    margin-top: 60px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .hero {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .hero-intro {
@@ -420,9 +414,12 @@ footer {
     object-fit: cover;
   }
   .proyectos {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    flex-wrap: wrap; */
   }
 
   .proyectos-contenedor {
