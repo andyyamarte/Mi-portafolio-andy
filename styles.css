@@ -83,12 +83,11 @@ menu a:visited {
 }
 
 .hero {
-  height: 100dvb;
-
   width: 100%;
   max-width: 900px;
   margin: auto;
-  padding-top: 50px;
+  height: 600px;
+
   align-items: flex-start;
   display: flex;
   flex-direction: row;
@@ -138,16 +137,20 @@ menu a:visited {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding-top: 50px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   justify-content: center;
   gap: 30px;
 }
-
+.proyectos-contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+}
 .titulo-proyectos {
   display: flex;
   width: 100%;
@@ -258,20 +261,104 @@ video {
   text-decoration: underline red solid;
 }
 
+/* =========================
+   formulario
+========================= */
+.formulario {
+  display: grid;
+  place-items: center;
+}
+/* =========================
+   footer
+========================= */
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
 /*movil*/
-@media screen and (width: 576px) {
+@media screen and (max-width: 600px) {
   header {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
+
+  .logo {
+    padding: 20px;
+  }
   .menu {
-    margin-top: 30px;
+    width: 100%;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menu-item {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /*hover*/
+  .menu li a:hover {
+    text-decoration: none;
+  }
+
+  .seccion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero {
+    gap: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvb;
+  }
+
+  .hero-intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-intro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .proyectos-contenedor {
+    width: 100%;
+    max-width: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 /*tablet*/
-@media (min-width: 500px) and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
   header {
     width: 100%;
     display: flex;
@@ -309,35 +396,48 @@ video {
   }
 
   .seccion {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
   }
   .hero {
+    width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100dvb;
+    flex-wrap: wrap;
   }
 
   .hero-intro {
-    width: 25%;
-    max-width: 200px;
-    margin: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .hero-intro img {
-    width: 200px;
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
   .proyectos {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    margin-top: 60px;
+    width: 100%;
+  }
+
+  .proyectos-contenedor {
+    margin: auto;
+    max-width: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .titulo-proyectos {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
