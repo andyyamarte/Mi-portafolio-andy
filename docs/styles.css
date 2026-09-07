@@ -1,0 +1,343 @@
+/* =========================
+   RESET
+========================= */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  width: 100%;
+  background-color: rgb(218, 214, 214);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 20px;
+}
+
+.logo {
+  color: rgba(255, 0, 0, 0.737);
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  display: flex;
+  gap: clamp(1.5rem, 4.5vw, 3.5rem);
+}
+
+.menu li {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  color: rgb(118, 114, 114);
+  cursor: pointer;
+}
+
+.menu a,
+menu a:visited {
+  text-decoration: none;
+  color: rgb(118, 114, 114);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.seccion {
+  width: 100%;
+}
+
+.hero {
+  height: 100dvb;
+
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding-top: 50px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.hero-intro {
+  width: 25%;
+  max-width: 200px;
+  margin: auto;
+  display: flex;
+}
+
+.hero-intro img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-info {
+  width: 60%;
+  max-width: 700px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  width: 100%;
+  font-size: 2.4rem;
+  color: rgba(255, 0, 0, 0.566);
+}
+
+.hero-text {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: rgb(120, 111, 111);
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.proyectos {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 30px;
+}
+
+.titulo-proyectos {
+  display: flex;
+  width: 100%;
+  color: rgba(230, 53, 53, 0.779);
+  font-size: 2.4rem;
+  text-shadow:
+    -1px 0 black,
+    0 1px black,
+    1px 0 black,
+    0 -1px black;
+  justify-content: center;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+video {
+  display: none;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  width: 16rem;
+  min-height: 22rem;
+
+  padding: 10px;
+
+  background-color: rgba(255, 255, 255, 0.549);
+  border-radius: 1.2cap;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Imagen de la card */
+
+.card img {
+  width: 100%;
+  height: 12rem;
+
+  object-fit: cover;
+
+  border-radius: 1.2cap;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* Contenido de la card */
+
+.card-content {
+  padding: 10px 10px;
+
+  /* Ocupa el espacio disponible */
+  flex: 1;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #616161;
+  text-shadow: #e0e0e0 1px 1px 0;
+}
+
+.description {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgb(97, 88, 88);
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.boton {
+  display: block;
+  width: 100%;
+  font-size: small;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  /* Empuja el botón hacia abajo */
+  margin-top: auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(148, 107, 198);
+  border-radius: 2cap;
+  transition: ease-out all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.boton:hover {
+  background-color: rgb(125, 85, 175);
+}
+.menu li a:hover {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  color: rgb(71, 34, 34);
+  cursor: pointer;
+  text-decoration: underline red solid;
+}
+
+/*movil*/
+@media screen and (width: 576px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu {
+    margin-top: 30px;
+  }
+}
+
+/*tablet*/
+@media (min-width: 500px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .logo {
+    padding: 20px;
+  }
+  .menu {
+    width: 100%;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .menu-item {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /*hover*/
+  .menu li a:hover {
+    text-decoration: none;
+  }
+
+  .seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100dvb;
+  }
+
+  .hero-intro {
+    width: 25%;
+    max-width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-intro img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+  .proyectos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 60px;
+  }
+}

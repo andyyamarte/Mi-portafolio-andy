@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Gsap</title>
+  </head>
+  <body>
+    <header>
+      <p class="logo">Andy Yamarte</p>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#Inicio">Inicio</a></li>
+          <li class="menu-item"><a href="#proyectos">Proyectos</a></li>
+          <li class="menu-item"><a href="#sobre-mi">Sobre mí</a></li>
+          <li class="menu-item"><a href="#contactame">Contáctame</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero seccion">
+      <div class="hero-intro">
+        <div class="hero-image">
+          <img src="./assets/andy.JPG" alt="" />
+        </div>
+      </div>
+      <div class="hero-info">
+        <h1 class="hero-title">Soy Andy.<br />Estudiante de desarrollo web</h1>
+        <p class="hero-text">
+          Aprendí a hacer sitios web viendo videos en youtube y haciendo cursos
+          y ahora quiero compartir las heramientas que adquirí a lo largo de los
+          años. Sé que a veces puede ser frustante y difícil avanzar. Mi
+          objetivo es ayudarte a comprender mejor los principales lenguajes de
+          desarrollo frontend y acompañerte en tu camino de aprendizaje.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion proyectos" id="proyectos">
+      <h2 class="titulo-proyectos">Proyectos</h2>
+      <div class="card uno">
+        <div class="card-media">
+          <img src="assets/blackjackjuego.png" alt="Captura del proyecto" />
+        </div>
+
+        <div class="card-content">
+          <h2 class="titulo">Black-Jack</h2>
+
+          <p class="description">
+            Cree un juego de cartas utilizando las tecnologías Html, Css,
+            Javascript, este proyecto utilice mucho mas Javascript y tambien una
+            libreria llamada underscore con esto cree un mazo de cartas
+            aleatorio.
+          </p>
+        </div>
+        <a
+          class="boton"
+          href="https://andyyamarte.github.io/js-vite-blackjack/"
+          target="_blank"
+          >Ver página</a
+        >
+      </div>
+
+      <div class="card dos">
+        <div class="card-media">
+          <img src="assets/figma muebles.png" alt="Captura del proyecto" />
+        </div>
+
+        <div class="card-content">
+          <h2 class="titulo">Diseño Figma</h2>
+
+          <p class="description">
+            Cree un diseño en utilizando la herramienta de figma donde apliqui
+            varios elementos como componentes, hovers, colores y tamaños
+          </p>
+        </div>
+        <a class="boton" href="#" target="_blank">Ver página</a>
+      </div>
+
+      <div class="card tres">
+        <div class="card-media">
+          <img src="assets/PokeApi.png" alt="Captura del proyecto" />
+        </div>
+        <div class="card-content">
+          <h2 class="titulo">Poke-API</h2>
+          <p class="description">
+            Consumiendo API en la cual utilice vite para utilizar un entorno
+            moderno, tambien utilice vanilla javascript y utilice el metodo
+            fetch y su promesa utilizando async y await.
+          </p>
+        </div>
+        <a
+          class="boton"
+          href="https://andyyamarte.github.io/Pokemon-Api/"
+          target="_blank"
+          >Ver página</a
+        >
+      </div>
+
+      <div class="card cinco">
+        <div class="card-media">
+          <img src="assets/foto blog notas.png" alt="blog notas store" />
+
+          <video src="assets/stora-blog-notas.mp4" controls></video>
+        </div>
+
+        <div class="card-content">
+          <h2 class="titulo">Blog Notas</h2>
+
+          <p class="description">
+            Implemente "Clean Arquitecture" para definir bien las carpetas y
+            todo este en orden, tambien utilice y diseñe variantes de entornos
+            para que al actualizar la pagina no se cargue toda la pagina, mas
+            bien quede guardado lo implementado o modificado.
+          </p>
+        </div>
+        <a
+          class="boton"
+          href="https://andyyamarte.github.io/Store-UseCase-Models/#/"
+          target="_blank"
+          >Ver página</a
+        >
+      </div>
+      <div class="card seis">
+        <div class="card-media">
+          <img src="assets/comida asiatica.png" alt="blog notas store" />
+        </div>
+
+        <div class="card-content">
+          <h2 class="titulo">Comida asiatica</h2>
+
+          <p class="description">
+            Un diseño para un restaurante en la cual utilice html css y
+            javascript con la potencia de una galeria utilizando grid y su
+            responsive.
+          </p>
+        </div>
+        <a
+          class="boton"
+          href="https://andyyamarte.github.io/Pagina-Web-Comida-Asiatica/"
+          target="_blank"
+          >Ver página</a
+        >
+      </div>
+      <div class="card siete">
+        <div class="card-media">
+          <img src="assets/Startup.png" alt="blog notas store" />
+        </div>
+
+        <div class="card-content">
+          <h2 class="titulo">Startup</h2>
+
+          <p class="description">
+            Pagina startup donde implemente un carrusel par el cambio de fotos
+            automaticos,en los enlaces, con javascript enlace las fotos y se
+            cambian al hacer click
+          </p>
+        </div>
+        <a
+          class="boton"
+          href="https://andyyamarte.github.io/Startup/"
+          target="_blank"
+          >Ver página</a
+        >
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="algo.js"></script>
+  </body>
+</html>
