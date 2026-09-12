@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 let logo = document.querySelector(".logo");
 gsap.from(logo, {
   delay: ".5",
@@ -94,4 +96,65 @@ text.chars.forEach((char, index) => {
         },
       });
   }
+});
+
+// =========================
+// SCROLLTRIGGER: aparición al hacer scroll
+// =========================
+
+gsap.from(".titulo-tecnologias", {
+  scrollTrigger: {
+    trigger: ".titulo-tecnologias",
+    start: "top 85%",
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out",
+});
+
+gsap.from(".tech-track", {
+  scrollTrigger: {
+    trigger: ".tech-carousel",
+    start: "top 85%",
+  },
+  y: 40,
+  opacity: 0,
+  duration: 0.9,
+  ease: "power3.out",
+});
+
+gsap.from(".titulo-proyectos", {
+  scrollTrigger: {
+    trigger: ".titulo-proyectos",
+    start: "top 85%",
+  },
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out",
+});
+
+gsap.utils.toArray(".card").forEach((card) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.7,
+    ease: "power3.out",
+  });
+});
+
+gsap.from(".formulario", {
+  scrollTrigger: {
+    trigger: ".formulario",
+    start: "top 90%",
+  },
+  y: 60,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power3.out",
 });
