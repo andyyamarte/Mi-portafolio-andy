@@ -393,6 +393,62 @@ video {
 }
 
 /* =========================
+   sobre mi
+========================= */
+
+.sobre-mi {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.titulo-sobre-mi {
+  width: 100%;
+  text-align: center;
+  color: rgba(230, 53, 53, 0.779);
+  font-size: 2.4rem;
+  text-shadow:
+    -1px 0 black,
+    0 1px black,
+    1px 0 black,
+    0 -1px black;
+  margin-bottom: 40px;
+}
+
+.sobre-mi-contenido {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.sobre-mi-texto {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sobre-mi-texto p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgb(97, 88, 88);
+  text-align: justify;
+}
+
+.sobre-mi-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-mi-imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* =========================
    formulario
 ========================= */
 .formulario {
@@ -742,6 +798,19 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
+  .sobre-mi-contenido {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sobre-mi-imagen img {
+    max-width: 320px;
+  }
+
+  .titulo-sobre-mi {
+    font-size: 2rem;
+  }
 }
 
 /*movil - cards en 2 columnas*/
@@ -847,5 +916,25 @@ footer {
   .footer-social img {
     width: 26px;
     height: 26px;
+  }
+
+  .titulo-sobre-mi {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .sobre-mi-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sobre-mi-texto p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .sobre-mi-imagen img {
+    max-width: 240px;
   }
 }
