@@ -12,6 +12,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   font-family:
     system-ui,
     -apple-system,
@@ -103,6 +104,7 @@ menu a:visited {
   max-width: 900px;
   margin: auto;
   height: 600px;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
 
@@ -110,6 +112,7 @@ menu a:visited {
   display: flex;
   flex-direction: row;
   gap: 30px;
+  box-sizing: border-box;
 }
 
 .hero-intro {
@@ -155,6 +158,8 @@ menu a:visited {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -191,6 +196,8 @@ menu a:visited {
   width: 100%;
   max-width: 1200px;
   margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -598,6 +605,56 @@ footer {
   color: rgb(120, 111, 111);
 }
 
+/* =========================
+   volver arriba
+========================= */
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  padding: 10px 14px;
+  border: none;
+  border-radius: 1.2cap;
+  background-color: rgb(148, 107, 198);
+  color: white;
+  cursor: pointer;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition:
+    background-color 0.3s ease-out,
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: rgb(125, 85, 175);
+}
+
+.back-to-top span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 /*movil*/
 @media screen and (max-width: 500px) {
   header {
@@ -768,10 +825,17 @@ footer {
 
   .hero-title {
     text-align: center;
+    font-size: 1.8rem;
   }
 
   .hero-text {
     text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-intro img {
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   .proyectos {
@@ -936,5 +1000,28 @@ footer {
 
   .sobre-mi-imagen img {
     max-width: 240px;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+    padding: 8px 10px;
+  }
+
+  .back-to-top span {
+    font-size: 0.6rem;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .hero-intro img {
+    max-width: 150px;
   }
 }
