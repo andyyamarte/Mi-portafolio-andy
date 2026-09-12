@@ -59,6 +59,10 @@ header {
   display: flex;
   gap: clamp(1.5rem, 4.5vw, 3.5rem);
 }
+.menu ul li a {
+  text-underline-offset: 4px;
+  transition: ease all 0.8s;
+}
 
 .menu li {
   list-style: none;
@@ -72,6 +76,22 @@ header {
 menu a:visited {
   text-decoration: none;
   color: rgb(118, 114, 114);
+}
+/* =========================
+   HOVER
+========================= */
+
+.boton:hover {
+  background-color: rgb(125, 85, 175);
+}
+.menu li a:hover {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  color: rgb(150, 65, 65);
+  cursor: pointer;
+  text-decoration: underline 3px red solid;
+  text-underline-offset: 4px;
 }
 
 /* =========================
@@ -166,6 +186,29 @@ menu a:visited {
    VIDEO
 ========================= */
 
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.video-modal.active {
+  display: flex;
+}
+.video-modal video {
+  max-width: 1100px;
+  width: 90%;
+  border-radius: 1cap;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
 video {
   display: none;
 }
@@ -241,22 +284,6 @@ video {
   border-radius: 2cap;
   transition: ease-out all 0.5s;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-/* =========================
-   HOVER
-========================= */
-
-.boton:hover {
-  background-color: rgb(125, 85, 175);
-}
-.menu li a:hover {
-  list-style: none;
-  font-size: large;
-  font-weight: 600;
-  color: rgb(71, 34, 34);
-  cursor: pointer;
-  text-decoration: underline red solid;
 }
 
 /* =========================
